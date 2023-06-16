@@ -79,7 +79,7 @@ class Bank:
 # -------------------------------------------------Admin's Methods
     def total_balance_check(self,name):
         if name in self.__users:
-            if name=='admin' or name=='Admin' or name=='ADMIN':
+            if name.startswith('admin') or name.startswith('Admin') or name.startswith('ADMIN'):
                 print('Bank\'s Balance:',self.__balance_of_bank)
             else:
                 print('Access Only Admin')
@@ -88,7 +88,7 @@ class Bank:
 
     def loan_amount_check(self,name):
         if name in self.__users:
-            if name=='admin' or name=='Admin' or name=='ADMIN':
+            if name.startswith('admin') or name.startswith('Admin') or name.startswith('ADMIN'):
                 print('Bank\'s Given Loan:',self.__given_loan)
             else:
                 print('Access Only Admin')
@@ -97,7 +97,7 @@ class Bank:
 
     def loan_shut_down(self,name):
         if name in self.__users:
-            if name=='admin' or name=='Admin' or name=='ADMIN':
+            if name.startswith('admin') or name.startswith('Admin') or name.startswith('ADMIN'):
                 self.__active_loan= False
             else:
                 print('Access Only Admin')
